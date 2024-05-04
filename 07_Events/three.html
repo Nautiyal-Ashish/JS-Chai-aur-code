@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASYNC</title>
+  </head>
+  <body>
+    <h1>Async JavaScript 2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      //   setInterval()
+      //   setInterval(() => {
+
+      //   }, interval);
+
+      //   const sayDate = function (str) {
+      //     console.log(str, Date.now());
+      //   };
+
+      //   const intervalID = setInterval(sayDate, 1000, "hi"); //countinous running
+
+      //   clearInterval(intervalID);
+
+      // -----------------------
+      const sayDate = function (str) {
+        console.log(str, Date.now());
+      };
+      let intervalId;
+      document.querySelector("#start").addEventListener("click", function () {
+        if (!intervalId) {
+          intervalID = setInterval(sayDate, 1000, "Ashish");
+        }
+      });
+
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearInterval(intervalID);
+        intervalId = null;
+      });
+    </script>
+  </body>
+</html>
